@@ -146,7 +146,10 @@ with tempdir() as temp_dir:
     # Install dependencies into the temporary directory.
     if runtime.startswith('python'):
         requirements = os.path.join(temp_dir, 'requirements.txt')
+        print('#'*80)
+        print(requirements)
         if os.path.exists(requirements):
+            print('EXIST!!!')
             with cd(temp_dir):
                 if runtime.startswith('python3'):
                     pip_command = 'pip3'
